@@ -1,0 +1,25 @@
+hi<br>
+<img src="../uploads/images/{{image}}" alt="test" />
+
+
+
+hi
+{% for product in products %}
+    <h3>{{product.nom}}</h3>
+{% endfor%}
+
+
+
+
+    <form action="add" method="post" id="uploadform" enctype="multipart/form-data">
+        <label for="nom" >Add nom</label>
+        <input type="text" name="nom" placeholder="add a nom" /><br>
+        <label for="marque" >Add marque</label>
+        <input type="text" name="marque" placeholder="add a marque" /><br>
+        <label for="nom" >Add nom</label>
+        <input type="number" name="prix" placeholder="0" /><br>
+        <label for="marque" >Add marque</label>
+         <input type="file" name="myimage" /><br>
+        <br>
+        <input type="submit" value="Save" />        
+    </form>

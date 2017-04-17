@@ -1,0 +1,14 @@
+{% extends "layout.twig" %}
+
+{% block content %}
+    <h1>{{ title }}</h1>
+    
+    <form action="/form/edit/{{comment._id}}" method="post">
+        <label for="comment" >Add comment</label>
+        <input value="{{comment.title}}" type="text" name="comment" placeholder="Edit Your comment" />
+        <input type="submit" value="Edit" />        
+    </form>
+</br>
+</br>
+
+{% endblock %}

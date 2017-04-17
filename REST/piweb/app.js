@@ -8,8 +8,11 @@ var db = require('./config/db');
 var index = require('./routes/index');
 var users = require('./routes/users');
 var products = require('./routes/products');
-
+var scraping = require('./routes/scraping');
 var app = express();
+app.use(express.static(__dirname + '/public'));
+
+
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
@@ -26,7 +29,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', index);
 app.use('/users', users);
 app.use('/products', products);
-
+app.use('/scraping', scraping);
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
