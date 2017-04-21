@@ -11,6 +11,11 @@
                 $scope.products =  data;
             });
         }
+         $scope.delete=function(product){
+        product.$delete(function(){
+        $scope.products.splice(selectedIndex,1);
+        });
+    }
     }
     ControllerFn.$inject = ['$scope', 'Product'];
     angular

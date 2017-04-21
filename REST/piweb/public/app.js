@@ -7,7 +7,7 @@
       //inside the view (see /product/product.view.html Line 1)
         $routeProvider
             .when('/products', {
-                templateUrl: "./product/product.view.html"
+                templateUrl: "./product/test.view.html"
             })
             .otherwise({
                 redirectTo: "/products"

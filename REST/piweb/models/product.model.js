@@ -5,8 +5,8 @@ var mongoose = require('mongoose');
 var productSchema = new mongoose.Schema({
     Nom:String,
 	marque:String,
-    prix: String
-   // image: String
+    prix: String,
+    image: String
 });
 
 var product = module.exports = mongoose.model('products', productSchema);
